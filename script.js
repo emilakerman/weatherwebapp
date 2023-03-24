@@ -29,7 +29,7 @@ const fetchThis = (inputCity) => {
         weatherImg.setAttribute('src', data.current.condition.icon);
         weatherImg.setAttribute('alt', data.current.condition.text);
         cityName.innerText = `${data.location.name}, ${data.location.country}`;
-        // weatherCondition.innerText = data.current.condition.text;
+        weatherCondition.innerText = `${data.current.condition.text}`;
         temperatureText.innerText = `${data.current.temp_c}°C`;
         inputCity = data.location.name;
     });

@@ -47,7 +47,8 @@ img {
     color: gray;
 }
 #weatherCondition {
-    /* text-align: center; */
+    margin-top: -20px;
+    color: gray;
 }
 #temperatureText {
     font-size: 50px;
