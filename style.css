@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(86, 83, 83);
   }
 #searchInput {
     display: flex;
@@ -13,6 +14,23 @@ div input {
     top: 50px;
 }
 div button {
-    position: relative;
+    position: absolute;
     top: 80px;
+}
+#cardView {
+    position: relative;
+    top: 150px;
+    width: 500px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: gray;
+}
+#cityName {
+    text-align: center;
+}
+#weatherCondition {
+    text-align: center;
+}
+#temperatureText {
+    text-align: center;
 }
