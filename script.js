@@ -1,13 +1,14 @@
 const body = document.querySelector('body');
 let inputField = document.getElementById('searchText');
 let searchButton = document.getElementById('searchButton');
-let weatherCard = document.createElement('div');
+// let weatherCard = document.createElement('div');
 let weatherImg = document.getElementById('weatherImg');
 let cityName = document.getElementById('cityName');
 let weatherCondition = document.getElementById('weatherCondition');
 let temperatureText = document.getElementById('temperatureText');
+let weatherCard = document.getElementById('cardView');
 
-body.appendChild(weatherCard);
+// body.appendChild(weatherCard);
 
 let inputCity = '';
 let weather = '';
@@ -39,18 +40,30 @@ const fetchThis = (inputCity) => {
 }
 const backgroundColorChecker = (weather) => {
     if (weather == 'Partly cloudy' ) {
-
+        weatherCard.id = 'cardViewCloudy';
+    }
+    if (weather == 'Cloudy' ) {
+        weatherCard.id = 'cardViewCloudy';
     }
     if (weather == 'Overcast') {
-
+        weatherCard.id = 'cardViewCloudy';
     }
     if (weather == 'Clear') {
-
+        weatherCard.id = 'cardView';
     }
     if (weather == 'Sunny') {
-        //keep the original bg
+        weatherCard.id = 'cardView';
     }
     if (weather == 'Light rain') {
-
+        weatherCard.id = 'cardViewRain';
     }
+    if (weather == 'Light rain shower') {
+        weatherCard.id = 'cardViewRain';
+    }
+    if (weather == 'Stormy') {
+        weatherCard.id = 'cardViewRain';
+    }
+    // else {
+    //     weatherCard.id = 'cardView';
+    // }
 }
