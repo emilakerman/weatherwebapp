@@ -39,31 +39,17 @@ const fetchThis = (inputCity) => {
     });
 }
 const backgroundColorChecker = (weather) => {
-    if (weather == 'Partly cloudy' ) {
+    switch (weather) {
+    case 'Partly cloudy' || 'Cloudy' || 'Overcast':
         weatherCard.id = 'cardViewCloudy';
-    }
-    if (weather == 'Cloudy' ) {
-        weatherCard.id = 'cardViewCloudy';
-    }
-    if (weather == 'Overcast') {
-        weatherCard.id = 'cardViewCloudy';
-    }
-    if (weather == 'Clear') {
+        break;
+    case 'Clear' || 'Sunny':
+        weatherCard.id = 'cardView';
+        break;
+    case 'Light rain' || 'Light rain shower' || 'Stormy':
+        weatherCard.id = 'cardViewRain';
+        break;
+    default:
         weatherCard.id = 'cardView';
     }
-    if (weather == 'Sunny') {
-        weatherCard.id = 'cardView';
-    }
-    if (weather == 'Light rain') {
-        weatherCard.id = 'cardViewRain';
-    }
-    if (weather == 'Light rain shower') {
-        weatherCard.id = 'cardViewRain';
-    }
-    if (weather == 'Stormy') {
-        weatherCard.id = 'cardViewRain';
-    }
-    // else {
-    //     weatherCard.id = 'cardView';
-    // }
 }
