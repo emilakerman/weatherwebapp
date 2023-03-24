@@ -9,17 +9,18 @@ let temperatureText = document.getElementById('temperatureText');
 
 body.appendChild(weatherCard);
 
-//api stuff current one
 let inputCity = '';
-// let apiUrl = `http://api.weatherapi.com/v1/current.json?key=4b00f66c64844ff0a65120230232303&q=${inputCity}`;
-
+let weather = '';
 
 searchButton.addEventListener('click', () => {
-    inputCity = inputField.value;
-    fetchThis(inputCity);
+    if (inputField.value != '') {
+        inputCity = inputField.value;
+        fetchThis(inputCity);
+    }
 });
 
 window.onload = function() {
+    inputField.value = '';
   };
 
 const fetchThis = (inputCity) => {
@@ -32,5 +33,24 @@ const fetchThis = (inputCity) => {
         weatherCondition.innerText = `${data.current.condition.text}`;
         temperatureText.innerText = `${data.current.temp_c}°C`;
         inputCity = data.location.name;
+        weather = data.current.condition.text;
+        backgroundColorChecker(weather);
     });
+}
+const backgroundColorChecker = (weather) => {
+    if (weather == 'Partly cloudy' ) {
+
+    }
+    if (weather == 'Overcast') {
+
+    }
+    if (weather == 'Clear') {
+
+    }
+    if (weather == 'Sunny') {
+        //keep the original bg
+    }
+    if (weather == 'Light rain') {
+
+    }
 }

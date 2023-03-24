@@ -11,11 +11,16 @@ body {
 }
 div input {
     position: absolute;
-    top: 50px;
+    top: 70px;
 }
 div button {
     position: absolute;
-    top: 80px;
+    top: 110px;
+}
+#searchInput h2 {
+    position: absolute;
+    color: white;
+    top: 0px;
 }
 #cardView {
     position: relative;
@@ -32,20 +37,12 @@ img {
     height: 100px;
     width: 100px;
 }
-#leftSide {
-    /* border: 1px solid black; */
-    text-align: center;
-    margin: auto;
-}
+#leftSide,
 #rightSide {
-    /* border: 1px solid black; */
     text-align: center;
     margin: auto;
 }
-#cityName {
-    margin-top: -20px;
-    color: gray;
-}
+#cityName,
 #weatherCondition {
     margin-top: -20px;
     color: gray;
